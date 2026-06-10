@@ -59,5 +59,11 @@ func _will_hit_world(from_position: Vector2, to_position: Vector2) -> bool:
 	var hit_result: Dictionary = space_state.intersect_ray(query)
 	return not hit_result.is_empty()
 	
-
+	
+# 与 Area2D碰撞后销毁，同时忽略其他子弹。	
+func _on_area_entered(area: Area2D) -> void:
+	if area is Bullet:
+		return
+		
+	queue_free()
 	
