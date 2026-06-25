@@ -386,16 +386,18 @@ script = SubResource("GDScript_hjaqi")
 
 [node name="BodySprite" type="AnimatedSprite2D" parent="." unique_id=607329139]
 sprite_frames = SubResource("SpriteFrames_8rkx0")
-animation = &"normal_right"
+animation = &"armed_down"
 autoplay = "normal_right"
 
 [node name="ArmedSprite" type="AnimatedSprite2D" parent="." unique_id=1333666753]
 visible = false
 sprite_frames = SubResource("SpriteFrames_1yrng")
 autoplay = "default"
-frame = 1
-frame_progress = 0.18519533
+frame = 6
+frame_progress = 0.57941455
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2113278178]
 position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_acav1")
+
+[node name="ShootingTimer" type="Timer" parent="." unique_id=973284981]
